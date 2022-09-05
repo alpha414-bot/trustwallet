@@ -69,7 +69,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Africa/Lagos',
 
     /*
     |--------------------------------------------------------------------------
@@ -210,6 +210,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
+        'Carbon' => \Carbon\Carbon::class,
     ])->toArray(),
 
 ];

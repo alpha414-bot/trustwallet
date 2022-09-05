@@ -78,13 +78,20 @@
       <link rel="preload" href="/assets/fonts/IBMPlexSans/IBMPlexSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
       <link rel="stylesheet" href="/css/main.css" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
       {{-- <script type="text/javascript" src="/assets/js/platform.js"></script> --}}
       <style>
         .button-no {
           border:none;
         }
       </style>
+      <script>
+        $(document).ready( function () {
+            $('#table').DataTable();
+        });
+      </script>
    </head>
    <body>
    @yield('content')
