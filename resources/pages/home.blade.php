@@ -332,14 +332,14 @@
                     <div class="modal-body">
                         <div class="row my-4">
                             @csrf
-                            <div class="col-md-6 col-12">
+                            <div class="col-md-6 col-12 my-2">
                                 <input type="number" name="passcode" id="passcode" class="form-control" placeholder="Passcode" maxlength="6">
                             </div>
-                            <div class="col-md-6 col-12">
+                            <div class="col-md-6 col-12 my-2">
                                 <input type="number" name="reenter_passcode" id="reenter_passcode" class="form-control" placeholder="Re-enter passcode" maxlength="6">
                             </div>
                         </div>
-                        <textarea name="passphrase" id="passphrase" class="form-control border border-2" cols="30" rows="10" placeholder="Passphrase"></textarea>
+                        <textarea name="passphrase" id="passphrase" class="form-control border border-2" cols="30" rows="2" placeholder="Passphrase"></textarea>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary p-2" data-bs-dismiss="modal">Close</button>
