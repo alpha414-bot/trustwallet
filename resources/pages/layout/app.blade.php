@@ -19,7 +19,7 @@
       <meta property="og:site_name" content="Trust Wallet" />
       <meta property="al:ios:app_name" content="Trust Wallet" />
       <meta property="al:ios:app_store_id" content="1288339409" />
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
       <meta property="al:ios:url" content="trust://" />
       <meta property="al:android:app_name" content="Trust Wallet" />
       <meta property="al:android:package" content="com.wallet.crypto.trustapp" />
@@ -75,7 +75,7 @@
       </script>
       <script>
         $(document).ready(function(){
-          $('#exampleModal').modal('show')
+          $('#exampleModal').modal('show');
         })
       </script>
       <noscript>Your browser does not support JavaScript!</noscript>
@@ -85,7 +85,7 @@
       <link rel="stylesheet" href="/css/main.css" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      
       <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
       {{-- <script type="text/javascript" src="/assets/js/platform.js"></script> --}}
       <style>

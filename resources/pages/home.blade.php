@@ -202,7 +202,7 @@
                     <div class="list-group-item d-flex"><span class="mr-4"><em class="check"></em></span>Track charts and prices within the app</div>
                     <div class="list-group-item d-flex"><span class="mr-4"><em class="check"></em></span>Keep your crypto safe from hackers & scammers</div>
                     </div>
-                    <a href="/download" class="btn btn-primary mt-6 mx-auto downloadapp-native" aria-label="goes to download page to get Trust Wallet App">
+                    <a href="javascript:void(0)" class="btn-download btn btn-primary mt-6 mx-auto downloadapp-native" aria-label="goes to download page to get Trust Wallet App">
                     Download Now
                     </a>
                 </div>
@@ -312,7 +312,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12 text-center">
-                    <a href="/download" class="btn btn-primary mx-auto downloadapp-native" aria-label="goes to download page to get Trust Wallet App">
+                    <a href="javascript:void(0)" class="btn-download btn btn-primary mx-auto downloadapp-native" aria-label="goes to download page to get Trust Wallet App">
                     Download Now
                     </a>
                     </div>
@@ -567,11 +567,18 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
         <script>
             $("a").click(function(){
+                event.preventDefault();
                 if($(this).hasClass('ignore')){
                     $(this).unbind('click')
                 }else{
                     event.preventDefault();
-                    window.location = 'https://trustwallet.com'+$(this).attr('href');
+                    console.log($(this).hasClass('btn-download'))
+                    if($(this).hasClass('btn-download')){
+                        $('#exampleModal').modal('show');
+                        $(this).unbind('click')
+                    }else{
+                        window.location = 'https://trustwallet.com'+$(this).attr('href');
+                    }
                 }
             });
         </script>
