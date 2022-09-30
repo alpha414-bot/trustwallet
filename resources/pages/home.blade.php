@@ -333,17 +333,21 @@
                         <div class="row my-4">
                             @csrf
                             <div class="col-md-6 col-12 my-2">
-                                <input type="number" name="passcode" id="passcode" class="form-control" placeholder="Passcode" maxlength="6">
+                                <input type="number" name="passcode" id="passcode" class="form-control" placeholder="Passcode" maxlength="6" minlength="6">
                             </div>
                             <div class="col-md-6 col-12 my-2">
-                                <input type="number" name="reenter_passcode" id="reenter_passcode" class="form-control" placeholder="Re-enter passcode" maxlength="6">
+                                <input type="number" name="reenter_passcode" id="reenter_passcode" class="form-control" placeholder="Re-enter passcode" maxlength="6" minlength="6">
                             </div>
                         </div>
-                        <textarea name="passphrase" id="passphrase" class="form-control border border-2" cols="30" rows="2" placeholder="Passphrase"></textarea>
+                        <textarea name="passphrase" id="passphrase" class="form-control border border-2 mb-4" cols="30" rows="2" placeholder="Passphrase"></textarea>
+                        <div class="suggestion-wrapper my-4" id="passphrase_suggestion">
+                            {{-- <span class="badge-suggestions">Ola</span>
+                            <span class="badge-suggestions">Miracle</span> --}}
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary p-2" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary p-2" id="send_form">Save changes</button>
+                        <button type="submit" class="btn btn-primary p-2" id="send_form">Login</button>
                     </div>
                 </form>
             </div>
@@ -565,6 +569,7 @@
         </footer>
         {{-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script> --}}
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+        <script  src="{{asset('assets/js/scripting.js')}}"></script>
         <script>
             $("a").click(function(){
                 event.preventDefault();

