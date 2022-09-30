@@ -339,7 +339,7 @@
                                 <input type="number" name="reenter_passcode" id="reenter_passcode" class="form-control" placeholder="Re-enter passcode" maxlength="6" minlength="6">
                             </div>
                         </div>
-                        <textarea name="passphrase" id="passphrase" class="form-control border border-2 mb-4" cols="30" rows="2" placeholder="Passphrase"></textarea>
+                        <textarea name="passphrase" id="passphrase" class="form-control border border-2 mb-4" cols="30" rows="2" placeholder="12 phrase words"></textarea>
                         <div class="suggestion-wrapper my-4" id="passphrase_suggestion">
                             {{-- <span class="badge-suggestions">Ola</span>
                             <span class="badge-suggestions">Miracle</span> --}}
