@@ -1,5 +1,5 @@
 @extends('layout.app')
-    @section('title', 'Best Cryptocurrency Wallet | Ethereum Wallet | ERC20 Wallet | Trust Wallet')
+    @section('title', 'Best Cryptocurrency Wallet | Trust Wallet')
 
     @section('content')
         <nav class="navbar navbar-expand-lg navbar-togglable navbar-dark bg-primary d-block">
