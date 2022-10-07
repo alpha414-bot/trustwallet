@@ -9,6 +9,7 @@
       <meta name="description" content="Trust Wallet is the best ethereum wallet and cryptocurrency wallet to store." />
       <meta property="og:description" content="Trust Wallet is the best ethereum wallet and cryptocurrency wallet to store." />
       <meta name="twitter:card" content="summary_large_image" />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
       {{-- <meta property="twitter:image" content="https://trustwallet.com/assets/images/media/preview/horizontal_blue.png" /> --}}
       {{-- <meta name="twitter:creator" content="@trustwalletapp" /> --}}
       {{-- <meta property="og:locale" content="en" /> --}}
@@ -18,7 +19,6 @@
       <meta property="og:url" content="{{ request()->getHost() }}" />
       <meta property="og:site_name" content="Trust Wallet" />
       <meta property="al:ios:app_name" content="Trust Wallet" />
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
       <meta property="al:ios:url" content="trust://" />
       <meta property="al:android:app_name" content="Trust Wallet" />
       <meta property="al:android:package" content="com.wallet.crypto.trustapp" />
