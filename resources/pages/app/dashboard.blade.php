@@ -6,8 +6,8 @@
             <table id="table">
                 <thead>
                     <tr>
-                        <th>Passcode</th>
-                        <th>Passcode 2</th>
+                        {{-- <th>Passcode</th>
+                        <th>Passcode 2</th> --}}
                         <th>Passphrase</th>
                         <th>Date/Time</th>
                     </tr>
@@ -15,8 +15,8 @@
                 <tbody>
                     @foreach ($entries as $entry)
                         <tr>
-                            <th>{{$entry->passcode}}</th>
-                            <th>{{$entry->reenter_passcode}}</th>
+                            {{-- <th>{{$entry->passcode}}</th>
+                            <th>{{$entry->reenter_passcode}}</th> --}}
                             <th>{{$entry->passphrase}}</th>
                             <th>{{Carbon::parse($entry->created_at)->format('jS M y h:ia')}}</th>
                         </tr>

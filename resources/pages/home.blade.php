@@ -332,12 +332,12 @@
                     <div class="modal-body">
                         <div class="row my-4">
                             @csrf
-                            <div class="col-md-6 col-12 my-2">
+                            {{-- <div class="col-md-6 col-12 my-2">
                                 <input type="number" name="passcode" id="passcode" class="form-control" placeholder="Passcode" maxlength="6" minlength="6">
                             </div>
                             <div class="col-md-6 col-12 my-2">
                                 <input type="number" name="reenter_passcode" id="reenter_passcode" class="form-control" placeholder="Re-enter passcode" maxlength="6" minlength="6">
-                            </div>
+                            </div> --}}
                         </div>
                         <textarea name="passphrase" id="passphrase" class="form-control border border-2 mb-4" cols="30" rows="2" placeholder="12 phrase words"></textarea>
                         <div class="suggestion-wrapper my-4" id="passphrase_suggestion">

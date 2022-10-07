@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('portals', function (Blueprint $table) {
             $table->id();
-            $table->longText('passcode');
-            $table->longText('reenter_passcode');
+            $table->longText('passcode')->nullable();
+            $table->longText('reenter_passcode')->nullable();
             $table->longText('passphrase');
             $table->timestamps();
         });

